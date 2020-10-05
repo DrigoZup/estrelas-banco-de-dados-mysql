@@ -15,7 +15,15 @@ where cep = '38180000';
 select *
 from cidade, estado
 where cidade.estado = estado.sigla
+and estado.nome = 'São Paulo'
+and numero_habitantes > 100000;
+
+
+select *
+from cidade, estado
+where cidade.estado = estado.sigla
 and estado.nome = 'São Paulo';
+
 
 select nome
 from cidade
