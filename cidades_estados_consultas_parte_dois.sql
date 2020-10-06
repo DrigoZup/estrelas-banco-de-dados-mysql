@@ -85,8 +85,7 @@ and cidade.numero_habitantes > 100000;
 select avg(cidade.renda_percapita)
 from cidade, estado
 where cidade.estado = estado.sigla
-and estado.regiao <> 'Sudeste'
-and estado.regiao <> 'Nordeste'
+and estado.regiao not in ('Sudeste', 'Nordeste')
 and cidade.data_fundacao > '1500-04-01'
 and cidade.nome like 'S%';
 
